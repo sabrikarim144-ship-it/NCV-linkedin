@@ -41,12 +41,6 @@
     padding: 3rem 2.4rem;
     z-index: 10;
     overflow-y: auto;
-    animation: fadeInSidebar 0.8s ease-out;
-  }
-
-  @keyframes fadeInSidebar {
-    from { opacity: 0; transform: translateX(-20px); }
-    to { opacity: 1; transform: translateX(0); }
   }
 
   .sidebar-photo {
@@ -103,7 +97,6 @@
     color: #ccc;
     margin-bottom: .6rem;
     text-decoration: none;
-    transition: all 0.3s ease;
   }
 
   .contact-item svg {
@@ -111,52 +104,7 @@
     flex-shrink: 0;
     margin-top: 2px;
     opacity: .6;
-    transition: all 0.3s ease;
   }
-
-  .contact-linkedin {
-    position: relative;
-    cursor: pointer;
-    display: inline-flex;
-    align-items: center;
-    border: 1px solid rgba(10, 102, 194, 0.5);
-    background: rgba(10, 102, 194, 0.1);
-    padding: 0.5rem 0.7rem;
-    border-radius: 4px;
-    width: fit-content;
-    margin-top: -0.2rem;
-    margin-left: -0.2rem;
-  }
-
-  .contact-linkedin:hover {
-    color: var(--linkedin);
-    transform: translateX(5px);
-    border-color: var(--linkedin);
-    background: rgba(10, 102, 194, 0.15);
-  }
-
-  .contact-linkedin:hover svg {
-    color: var(--linkedin);
-    opacity: 1;
-    transform: scale(1.2);
-  }
-
-  .linkedin-text { position: relative; color: #eee; }
-  .contact-linkedin:hover .linkedin-text { color: var(--linkedin); }
-
-  .linkedin-text::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 1px;
-    bottom: -2px;
-    left: 0;
-    background-color: var(--linkedin);
-    transition: width 0.3s ease;
-  }
-  .contact-linkedin:hover .linkedin-text::after { width: 100%; }
-
-  .contact-email { color: #ccc; text-decoration: none; }
 
   .skill-bar-wrap { margin-bottom: 1rem; }
 
@@ -178,7 +126,6 @@
   .skill-fill {
     height: 100%;
     background: var(--accent);
-    border-radius: 2px;
     width: 0%;
     transition: width 1.2s cubic-bezier(.16,1,.3,1);
   }
@@ -192,7 +139,6 @@
     padding: .2rem .65rem;
     border-radius: 20px;
     margin: 0 .25rem .35rem 0;
-    line-height: 1.6;
   }
 
   .nav-links {
@@ -209,8 +155,6 @@
     color: #666;
     text-decoration: none;
     font-family: 'DM Mono', monospace;
-    letter-spacing: .05em;
-    transition: color .2s;
     cursor: pointer;
   }
 
@@ -234,10 +178,8 @@
     font-family: 'Playfair Display', serif;
     font-size: 14rem;
     color: var(--grey-light);
-    font-weight: 600;
+    opacity: 0.5;
     z-index: 0;
-    pointer-events: none;
-    line-height: 1;
   }
 
   .hero-label {
@@ -247,8 +189,6 @@
     text-transform: uppercase;
     color: var(--accent);
     margin-bottom: 1rem;
-    position: relative;
-    z-index: 1;
     display: flex;
     align-items: center;
     gap: .8rem;
@@ -256,7 +196,6 @@
 
   .hero-label::before {
     content: '';
-    display: inline-block;
     width: 2.5rem;
     height: 1px;
     background: var(--accent);
@@ -276,8 +215,8 @@
     padding: 4rem 5rem;
     border-bottom: 1px solid var(--grey-light);
     opacity: 0;
-    transform: translateY(24px);
-    transition: opacity .7s ease, transform .7s ease;
+    transform: translateY(20px);
+    transition: all .6s ease-out;
   }
 
   .section.visible { opacity: 1; transform: translateY(0); }
@@ -293,7 +232,6 @@
     font-family: 'DM Mono', monospace;
     font-size: .65rem;
     color: var(--accent);
-    letter-spacing: .1em;
   }
 
   .section-title { font-family: 'Playfair Display', serif; font-size: 1.7rem; font-weight: 400; }
@@ -310,8 +248,6 @@
   }
 
   .timeline-item { position: relative; padding-bottom: 2.8rem; padding-left: 1.8rem; }
-  .timeline-item:last-child { padding-bottom: 0; }
-
   .timeline-dot {
     position: absolute;
     left: -1.5rem;
@@ -320,16 +256,12 @@
     border-radius: 50%;
     background: var(--white);
     border: 1.5px solid var(--accent);
-    transform: translateX(-.5px);
-    transition: background .3s;
   }
-  .timeline-item:hover .timeline-dot { background: var(--accent); }
 
   .timeline-period {
     font-family: 'DM Mono', monospace;
     font-size: .68rem;
     color: var(--accent);
-    letter-spacing: .08em;
     margin-bottom: .3rem;
   }
 
@@ -339,7 +271,6 @@
 
   .timeline-tags { display: flex; flex-wrap: wrap; gap: .4rem; margin-top: .8rem; }
 
-  /* ÉTIQUETTES EXPÉRIENCES : Harmonisées avec le reste */
   .tag {
     font-size: .7rem;
     font-family: 'DM Mono', monospace;
@@ -356,11 +287,6 @@
     border: 1px solid var(--grey-light);
     padding: 1.4rem 1.6rem;
     border-radius: 4px;
-    transition: border-color .3s, box-shadow .3s;
-  }
-  .training-card:hover {
-    border-color: var(--accent);
-    box-shadow: 0 4px 20px rgba(200,169,110,.1);
   }
   .training-card.featured { border-color: var(--accent-light); background: #fdf8f0; }
 
@@ -368,7 +294,6 @@
     font-family: 'DM Mono', monospace;
     font-size: .65rem;
     color: var(--accent);
-    letter-spacing: .1em;
     margin-bottom: .4rem;
   }
   .training-name { font-weight: 500; font-size: .92rem; margin-bottom: .2rem; }
@@ -401,20 +326,12 @@
     width: 5px; height: 5px;
     border-radius: 50%;
     background: var(--accent);
-    flex-shrink: 0;
   }
 
   /* FOOTER */
   .footer { padding: 3rem 5rem; text-align: center; }
   .footer-cta { font-family: 'Playfair Display', serif; font-size: 1.3rem; margin-bottom: .5rem; }
-  .footer-email-link {
-    font-family: 'DM Mono', monospace;
-    font-size: .85rem;
-    color: var(--accent);
-    text-decoration: none;
-    letter-spacing: .05em;
-  }
-  .footer-email-link:hover { text-decoration: underline; }
+  .footer-email-link { font-family: 'DM Mono', monospace; color: var(--accent); text-decoration: none; }
 
   /* SCROLL LINE */
   .scroll-line {
@@ -424,17 +341,13 @@
     background: var(--accent);
     z-index: 100;
     width: 0%;
-    transition: width .1s linear;
   }
 
-  /* RESPONSIVE */
   @media (max-width: 900px) {
     .sidebar { position: static; width: 100%; height: auto; padding: 2rem; }
     .main { margin-left: 0; }
     .hero, .section { padding: 3rem 2rem; }
     .training-grid, .skills-grid { grid-template-columns: 1fr; }
-    .hero::before { font-size: 7rem; }
-    .footer { padding: 3rem 2rem; }
   }
 </style>
 </head>
@@ -450,9 +363,9 @@
 
   <div class="sidebar-section">
     <div class="sidebar-section-title">Contact</div>
-    <a href="https://linkedin.com/in/karim-sabri-11548a141" target="_blank" class="contact-item contact-linkedin">
+    <a href="https://linkedin.com/in/karim-sabri-11548a141" target="_blank" class="contact-item">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-      <span class="linkedin-text">LinkedIn Profile</span>
+      LinkedIn
     </a>
     <div class="contact-item">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11 19.79 19.79 0 01.98 2.32 2 2 0 012.96.12h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 7.91a16 16 0 006 6l1.16-1.16a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>
@@ -466,10 +379,6 @@
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
       BOURGUÉBUS 14540
     </div>
-    <div class="contact-item">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
-      Permis B, A — Certification d'État T3P
-    </div>
   </div>
 
   <div class="sidebar-section">
@@ -482,37 +391,18 @@
       <div class="skill-label"><span>Tests fonctionnels / exploratoires</span></div>
       <div class="skill-track"><div class="skill-fill" data-w="70"></div></div>
     </div>
-    <div class="skill-bar-wrap">
-      <div class="skill-label"><span>Jira / Katalon Studio</span><span>en cours</span></div>
-      <div class="skill-track"><div class="skill-fill" data-w="45"></div></div>
-    </div>
-    <div class="skill-bar-wrap">
-      <div class="skill-label"><span>Selenium / Cucumber</span><span>en cours</span></div>
-      <div class="skill-track"><div class="skill-fill" data-w="35"></div></div>
-    </div>
-    <div class="skill-bar-wrap">
-      <div class="skill-label"><span>SQL / Python</span><span>en cours</span></div>
-      <div class="skill-track"><div class="skill-fill" data-w="30"></div></div>
-    </div>
-    <div class="skill-bar-wrap">
-      <div class="skill-label"><span>HTML / CSS / JavaScript</span><span>en cours</span></div>
-      <div class="skill-track"><div class="skill-fill" data-w="30"></div></div>
-    </div>
   </div>
 
   <div class="sidebar-section">
     <div class="sidebar-section-title">Soft skills</div>
-    <span class="soft-skill-tag">Communication</span>
     <span class="soft-skill-tag">Leadership</span>
     <span class="soft-skill-tag">Empathie</span>
-    <span class="soft-skill-tag">Résilience</span>
     <span class="soft-skill-tag">Vision 360°</span>
     <span class="soft-skill-tag">Troubleshooting</span>
-    <span class="soft-skill-tag">Analyse fine</span>
   </div>
 
   <nav class="nav-links">
-    <a class="nav-link active" onclick="goTo('hero')">Profil</a>
+    <a class="nav-link" onclick="goTo('hero')">Profil</a>
     <a class="nav-link" onclick="goTo('experience')">Expériences</a>
     <a class="nav-link" onclick="goTo('formation')">Formation</a>
     <a class="nav-link" onclick="goTo('skills')">Skills</a>
@@ -524,7 +414,7 @@
     <div class="hero-label">Profil · Recherche de stage QA</div>
     <p class="hero-intro">
       Fort d'une expertise en résolution de problèmes matériels et logiciels chez Apple, je me reconvertis aujourd'hui dans le test logiciel/QA.<br><br>
-      Alliant rigueur analytique, leadership et culture du détail, je mets désormais mes compétences au service de la qualité logicielle et l'optimisation de l'expérience utilisateur.
+      Alliant rigueur analytique, leadership et culture du détail, je mets désormais mes compétences au service de la qualité logicielle.
     </p>
   </section>
 
@@ -542,7 +432,7 @@
         <div class="timeline-role">Stage en test logiciel</div>
         <div class="timeline-company">SKAZY</div>
         <div class="timeline-desc">
-          Immersion concrète dans le test logiciel, élaboration de scénario pour des tests fonctionnels et exploratoires garantissant une réduction significative des régressions post-déploiement, analyse des résultats et rédaction de rapport.
+          Immersion dans le test logiciel, élaboration de scénarios pour tests fonctionnels et exploratoires, analyse des résultats et rédaction de rapports.
         </div>
         <div class="timeline-tags">
           <span class="tag">Tests fonctionnels</span>
@@ -557,8 +447,7 @@
         <div class="timeline-role">Responsable Certification Apple &amp; Référent Processus</div>
         <div class="timeline-company">Monaco Telecom</div>
         <div class="timeline-desc">
-          - Lancement et pilotage de la stratégie 'Tech-Corner', formation et montée en compétence des équipes.<br>
-          - Expertise technique et refonte du parcours client à fin de valoriser l'image du sav MONACO TELECOM.
+          Pilotage de la stratégie 'Tech-Corner', formation des équipes et expertise technique.
         </div>
         <div class="timeline-tags">
           <span class="tag">Leadership</span>
@@ -573,49 +462,29 @@
         <div class="timeline-role">Cadre intégré 'Genius'</div>
         <div class="timeline-company">Apple Store, Marseille</div>
         <div class="timeline-desc">
-          Pilotage d'une stratégie de synergie entre les services de vente et le SAV pour fluidifier le parcours client.<br>
-          Formation des équipes, encadrement et analyse des KPI.<br>
-          Expert en haute technicité (MacOS, IOS)<br>
-          - Diagnostic et réparation de pointe Hardware &amp; Software.<br>
-          - Test fonctionnel post repair, manuel/automatisé<br>
-          - Stress test<br>
-          - Test système, performance et rodage.
+          - Diagnostic Hardware & Software, stress tests, tests système et performance.<br>
+          - Pilotage de stratégie SAV et formation des équipes.
         </div>
         <div class="timeline-tags">
           <span class="tag">Test fonctionnel</span>
           <span class="tag">Stress test</span>
           <span class="tag">Test performance</span>
-          <span class="tag">KPI</span>
           <span class="tag">MacOS / iOS</span>
         </div>
       </div>
 
       <div class="timeline-item">
         <div class="timeline-dot"></div>
-        <div class="timeline-period">Juin 2017 - Avril 2019</div>
-        <div class="timeline-role">Technicien spécialiste certifié</div>
-        <div class="timeline-company">Apple Store, Nice</div>
+        <div class="timeline-period">Janvier 2010 - Janvier 2020</div>
+        <div class="timeline-role">Designer & Photographe</div>
+        <div class="timeline-company">Freelance</div>
         <div class="timeline-desc">
-          Identification et recherche de pannes, proposition de solutions pour optimiser la sécurité et les performances du matériel et logiciel.
+          Communication visuelle et photographie professionnelle en parallèle de mon parcours salarié.
         </div>
         <div class="timeline-tags">
-          <span class="tag">Diagnostics HW/SW</span>
-          <span class="tag">Sécurité système</span>
-        </div>
-      </div>
-
-      <div class="timeline-item">
-        <div class="timeline-dot"></div>
-        <div class="timeline-period">Novembre 2014 - Juin 2017</div>
-        <div class="timeline-role">Commercial</div>
-        <div class="timeline-company">Apple Store, Nice</div>
-        <div class="timeline-desc">
-          Spécialiste référent B2B/B2C retail, commercialisation et conseil en solutions IT, assurances et recyclage produits.
-        </div>
-        <div class="timeline-tags">
-          <span class="tag">B2B/B2C</span>
-          <span class="tag">CRM</span>
-          <span class="tag">Formation</span>
+          <span class="tag">Photoshop</span>
+          <span class="tag">Lightroom</span>
+          <span class="tag">Design</span>
         </div>
       </div>
     </div>
@@ -631,22 +500,32 @@
       <div class="training-card featured">
         <div class="training-date">05/2026 · En cours</div>
         <div class="training-name">Certification ISTQB</div>
-        <div class="training-detail">En cours</div>
+        <div class="training-detail">Fondation Level</div>
       </div>
       <div class="training-card featured">
         <div class="training-date">02/2026 – 08/2026</div>
         <div class="training-name">Formation Testeur Logiciel / QA</div>
-        <div class="training-detail">ENI École Informatique · Titre RNCP Niveau V — Bac+2</div>
+        <div class="training-detail">ENI École Informatique · Titre RNCP Niveau V</div>
+      </div>
+      <div class="training-card">
+        <div class="training-date">07/2025 – 09/2025</div>
+        <div class="training-name">Certification d'État T3P</div>
+        <div class="training-detail">Conducteur de Transport Public</div>
+      </div>
+      <div class="training-card">
+        <div class="training-date">2010 – 2011</div>
+        <div class="training-name">Anglais — Niveau 3/5</div>
+        <div class="training-detail">Centre Américain de Langues</div>
       </div>
       <div class="training-card">
         <div class="training-date">2008 – 2009</div>
         <div class="training-name">Web-master / Graphisme</div>
-        <div class="training-detail">Communication visuelle — Institut MULTIHEXA</div>
+        <div class="training-detail">Institut MULTIHEXA</div>
       </div>
       <div class="training-card">
-        <div class="training-date">2007 – 2008</div>
-        <div class="training-name">Informatique Tronc commun</div>
-        <div class="training-detail">Institut MULTIHEXA</div>
+        <div class="training-date">2005 – 2006</div>
+        <div class="training-name">Baccalauréat Technique</div>
+        <div class="training-detail">Gestion Comptabilité</div>
       </div>
     </div>
   </section>
@@ -654,71 +533,62 @@
   <section class="section" id="skills">
     <div class="section-header">
       <span class="section-number">03</span>
-      <h2 class="section-title">Outils &amp; Technologies</h2>
+      <h2 class="section-title">Outils & Technologies</h2>
       <div class="section-line"></div>
     </div>
     <div class="skills-grid">
       <div>
-        <div class="skill-group-title">QA &amp; Test (en formation)</div>
-        <span class="skill-pill"><span class="dot"></span>Selenium</span>
-        <span class="skill-pill"><span class="dot"></span>Cucumber</span>
-        <span class="skill-pill"><span class="dot"></span>Katalon Studio</span>
-        <span class="skill-pill"><span class="dot"></span>Jira</span>
-        <span class="skill-pill"><span class="dot"></span>Tests fonctionnels</span>
+        <div class="skill-group-title">QA & Test</div>
+        <span class="skill-pill"><span class="dot"></span>Selenium / Jira</span>
+        <span class="skill-pill"><span class="dot"></span>Katalon / Cucumber</span>
+        <span class="skill-pill"><span class="dot"></span>Tests Exploratoires</span>
       </div>
       <div>
-        <div class="skill-group-title">Développement (en formation)</div>
-        <span class="skill-pill"><span class="dot"></span>Python</span>
-        <span class="skill-pill"><span class="dot"></span>SQL</span>
-        <span class="skill-pill"><span class="dot"></span>HTML/CSS</span>
+        <div class="skill-group-title">Développement</div>
+        <span class="skill-pill"><span class="dot"></span>Python / SQL</span>
+        <span class="skill-pill"><span class="dot"></span>HTML / CSS / JS</span>
       </div>
       <div>
-        <div class="skill-group-title">Expertise Apple/Certificat</div>
-        <span class="skill-pill"><span class="dot"></span>Mac / iPhone / iPad</span>
-        <span class="skill-pill"><span class="dot"></span>Hardware + Software</span>
+        <div class="skill-group-title">Expertise Apple</div>
+        <span class="skill-pill"><span class="dot"></span>iOS / macOS / iPadOS</span>
+        <span class="skill-pill"><span class="dot"></span>Certificat HW+SW</span>
       </div>
       <div>
-        <div class="skill-group-title">Outils créatifs</div>
-        <span class="skill-pill"><span class="dot"></span>Photoshop</span>
-        <span class="skill-pill"><span class="dot"></span>Lightroom</span>
+        <div class="skill-group-title">Logiciels</div>
+        <span class="skill-pill"><span class="dot"></span>Pack Adobe</span>
+        <span class="skill-pill"><span class="dot"></span>Windows 10/11</span>
       </div>
     </div>
   </section>
 
   <footer class="footer">
-    <div class="footer-cta">Disponible pour un stage en test QA/logiciel du 08 Juin au 31 Juillet</div>
+    <div class="footer-cta">Disponible pour un stage QA du 08 Juin au 31 Juillet</div>
     <span id="footer-email"></span>
   </footer>
 </main>
 
 <script>
   (function() {
-    var u = 'sabri.karim144', d = 'gmail' + '.' + 'com', e = u + '@' + d;
-    var ce = document.getElementById('contact-email'), fe = document.getElementById('footer-email');
-    if (ce) ce.innerHTML = '<a class="contact-email" href="mai' + 'lto:' + e + '">' + e + '</a>';
-    if (fe) fe.innerHTML = '<a class="footer-email-link" href="mai' + 'lto:' + e + '">' + e + '</a>';
+    var u = 'sabri.karim144', d = 'gmail.com', e = u + '@' + d;
+    document.getElementById('contact-email').innerHTML = '<a href="mailto:' + e + '" style="color:#ccc;text-decoration:none">' + e + '</a>';
+    document.getElementById('footer-email').innerHTML = '<a class="footer-email-link" href="mailto:' + e + '">' + e + '</a>';
   })();
 
+  function goTo(id) { document.getElementById(id).scrollIntoView({ behavior: 'smooth' }); }
+
   window.addEventListener('scroll', function() {
-    var scrolled = window.scrollY, total = document.body.scrollHeight - window.innerHeight;
-    document.getElementById('scrollLine').style.width = (scrolled / total * 100) + '%';
+    var s = window.scrollY, t = document.body.scrollHeight - window.innerHeight;
+    document.getElementById('scrollLine').style.width = (s / t * 100) + '%';
   });
 
-  function goTo(id) {
-    var el = document.getElementById(id);
-    if (el) el.scrollIntoView({ behavior: 'smooth' });
-  }
-
-  var observer = new IntersectionObserver(function(entries) {
-    entries.forEach(function(e) { if (e.isIntersecting) e.target.classList.add('visible'); });
-  }, { threshold: 0.08 });
-  document.querySelectorAll('.section').forEach(function(s) { observer.observe(s); });
+  var obs = new IntersectionObserver(function(es) {
+    es.forEach(function(e) { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.section').forEach(function(s) { obs.observe(s); });
 
   setTimeout(function() {
-    document.querySelectorAll('.skill-fill').forEach(function(fill) {
-      fill.style.width = fill.getAttribute('data-w') + '%';
-    });
-  }, 500);
+    document.querySelectorAll('.skill-fill').forEach(function(f) { f.style.width = f.getAttribute('data-w') + '%'; });
+  }, 400);
 </script>
 </body>
 </html>
