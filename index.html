@@ -477,19 +477,15 @@
     align-items: center;
     gap: .4rem;
     font-size: .8rem;
-    background: #f0ece6;
+    background: #f0ece6; /* Couleur de base (identique à Apple) */
     color: #444;
     padding: .3rem .8rem;
     border-radius: 20px;
     margin: 0 .3rem .4rem 0;
+    border: 1px solid transparent; /* Pour garder l'alignement stable */
   }
 
-  /* MODIFICATION ICI : Doré plus léger pour les items actifs */
-  .skill-pill.active {
-    background: #d4bc8d;      
-    color: var(--white);
-    border: 1px solid #c8a96e;
-  }
+  /* On supprime la règle skill-pill.active pour que tout soit uniforme */
 
   .skill-pill .dot {
     width: 5px; height: 5px;
@@ -812,21 +808,21 @@
     <div class="skills-grid">
       <div>
         <div class="skill-group-title">QA &amp; Test (en formation)</div>
-        <span class="skill-pill active"><span class="dot"></span>Selenium</span>
-        <span class="skill-pill active"><span class="dot"></span>Cucumber</span>
-        <span class="skill-pill active"><span class="dot"></span>Katalon Studio</span>
-        <span class="skill-pill active"><span class="dot"></span>Jira</span>
-        <span class="skill-pill active"><span class="dot"></span>Tests fonctionnels</span>
-        <span class="skill-pill active"><span class="dot"></span>Tests exploratoires</span>
-        <span class="skill-pill active"><span class="dot"></span>Stress tests</span>
+        <span class="skill-pill"><span class="dot"></span>Selenium</span>
+        <span class="skill-pill"><span class="dot"></span>Cucumber</span>
+        <span class="skill-pill"><span class="dot"></span>Katalon Studio</span>
+        <span class="skill-pill"><span class="dot"></span>Jira</span>
+        <span class="skill-pill"><span class="dot"></span>Tests fonctionnels</span>
+        <span class="skill-pill"><span class="dot"></span>Tests exploratoires</span>
+        <span class="skill-pill"><span class="dot"></span>Stress tests</span>
       </div>
       <div>
         <div class="skill-group-title">Développement (en formation)</div>
-        <span class="skill-pill active"><span class="dot"></span>Python</span>
-        <span class="skill-pill active"><span class="dot"></span>SQL</span>
-        <span class="skill-pill active"><span class="dot"></span>HTML</span>
-        <span class="skill-pill active"><span class="dot"></span>CSS</span>
-        <span class="skill-pill active"><span class="dot"></span>JavaScript</span>
+        <span class="skill-pill"><span class="dot"></span>Python</span>
+        <span class="skill-pill"><span class="dot"></span>SQL</span>
+        <span class="skill-pill"><span class="dot"></span>HTML</span>
+        <span class="skill-pill"><span class="dot"></span>CSS</span>
+        <span class="skill-pill"><span class="dot"></span>JavaScript</span>
       </div>
       <div>
         <div class="skill-group-title">Expertise Apple/Certificat</div>
