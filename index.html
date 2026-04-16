@@ -180,6 +180,7 @@
     color: var(--grey-light);
     opacity: 0.5;
     z-index: 0;
+    pointer-events: none;
   }
 
   .hero-label {
@@ -363,10 +364,6 @@
 
   <div class="sidebar-section">
     <div class="sidebar-section-title">Contact</div>
-    <a href="https://linkedin.com/in/karim-sabri-11548a141" target="_blank" class="contact-item">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-      LinkedIn
-    </a>
     <div class="contact-item">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11 19.79 19.79 0 01.98 2.32 2 2 0 012.96.12h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 7.91a16 16 0 006 6l1.16-1.16a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>
       06 29 18 40 81
@@ -378,6 +375,10 @@
     <div class="contact-item">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
       BOURGUÉBUS 14540
+    </div>
+    <div class="contact-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+      Permis B, A — Certification d'État T3P
     </div>
   </div>
 
@@ -391,14 +392,33 @@
       <div class="skill-label"><span>Tests fonctionnels / exploratoires</span></div>
       <div class="skill-track"><div class="skill-fill" data-w="70"></div></div>
     </div>
+    <div class="skill-bar-wrap">
+      <div class="skill-label"><span>Jira / Katalon Studio</span><span>en cours</span></div>
+      <div class="skill-track"><div class="skill-fill" data-w="45"></div></div>
+    </div>
+    <div class="skill-bar-wrap">
+      <div class="skill-label"><span>Selenium / Cucumber</span><span>en cours</span></div>
+      <div class="skill-track"><div class="skill-fill" data-w="35"></div></div>
+    </div>
+    <div class="skill-bar-wrap">
+      <div class="skill-label"><span>SQL / Python</span><span>en cours</span></div>
+      <div class="skill-track"><div class="skill-fill" data-w="30"></div></div>
+    </div>
+    <div class="skill-bar-wrap">
+      <div class="skill-label"><span>HTML / CSS / JavaScript</span><span>en cours</span></div>
+      <div class="skill-track"><div class="skill-fill" data-w="30"></div></div>
+    </div>
   </div>
 
   <div class="sidebar-section">
     <div class="sidebar-section-title">Soft skills</div>
+    <span class="soft-skill-tag">Communication</span>
     <span class="soft-skill-tag">Leadership</span>
     <span class="soft-skill-tag">Empathie</span>
+    <span class="soft-skill-tag">Résilience</span>
     <span class="soft-skill-tag">Vision 360°</span>
     <span class="soft-skill-tag">Troubleshooting</span>
+    <span class="soft-skill-tag">Analyse fine</span>
   </div>
 
   <nav class="nav-links">
@@ -414,7 +434,7 @@
     <div class="hero-label">Profil · Recherche de stage QA</div>
     <p class="hero-intro">
       Fort d'une expertise en résolution de problèmes matériels et logiciels chez Apple, je me reconvertis aujourd'hui dans le test logiciel/QA.<br><br>
-      Alliant rigueur analytique, leadership et culture du détail, je mets désormais mes compétences au service de la qualité logicielle.
+      Alliant rigueur analytique, leadership et culture du détail, je mets désormais mes compétences au service de la qualité logicielle et l'optimisation de l'expérience utilisateur.
     </p>
   </section>
 
@@ -432,7 +452,7 @@
         <div class="timeline-role">Stage en test logiciel</div>
         <div class="timeline-company">SKAZY</div>
         <div class="timeline-desc">
-          Immersion dans le test logiciel, élaboration de scénarios pour tests fonctionnels et exploratoires, analyse des résultats et rédaction de rapports.
+          Immersion concrète dans le test logiciel, élaboration de scénario pour des tests fonctionnels et exploratoires garantissant une réduction significative des régressions post-déploiement, analyse des résultats et rédaction de rapport.
         </div>
         <div class="timeline-tags">
           <span class="tag">Tests fonctionnels</span>
@@ -447,7 +467,8 @@
         <div class="timeline-role">Responsable Certification Apple &amp; Référent Processus</div>
         <div class="timeline-company">Monaco Telecom</div>
         <div class="timeline-desc">
-          Pilotage de la stratégie 'Tech-Corner', formation des équipes et expertise technique.
+          - Lancement et pilotage de la stratégie 'Tech-Corner', formation et montée en compétence des équipes.<br>
+          - Expertise technique et refonte du parcours client à fin de valoriser l'image du sav MONACO TELECOM.
         </div>
         <div class="timeline-tags">
           <span class="tag">Leadership</span>
@@ -462,24 +483,62 @@
         <div class="timeline-role">Cadre intégré 'Genius'</div>
         <div class="timeline-company">Apple Store, Marseille</div>
         <div class="timeline-desc">
-          - Diagnostic Hardware & Software, stress tests, tests système et performance.<br>
-          - Pilotage de stratégie SAV et formation des équipes.
+          Pilotage d'une stratégie de synergie entre les services de vente et le SAV pour fluidifier le parcours client.<br>
+          Formation des équipes, encadrement et analyse des KPI.<br>
+          Expert en haute technicité (MacOS, IOS)<br>
+          - Diagnostic et réparation de pointe Hardware &amp; Software.<br>
+          - Test fonctionnel post repair, manuel/automatisé<br>
+          - Stress test<br>
+          - Test système, performance et rodage.
         </div>
         <div class="timeline-tags">
           <span class="tag">Test fonctionnel</span>
           <span class="tag">Stress test</span>
           <span class="tag">Test performance</span>
+          <span class="tag">KPI</span>
           <span class="tag">MacOS / iOS</span>
         </div>
       </div>
 
       <div class="timeline-item">
         <div class="timeline-dot"></div>
-        <div class="timeline-period">Janvier 2010 - Janvier 2020</div>
-        <div class="timeline-role">Designer & Photographe</div>
-        <div class="timeline-company">Freelance</div>
+        <div class="timeline-period">Juin 2017 - Avril 2019</div>
+        <div class="timeline-role">Technicien spécialiste certifié</div>
+        <div class="timeline-company">Apple Store, Nice</div>
         <div class="timeline-desc">
-          Communication visuelle et photographie professionnelle en parallèle de mon parcours salarié.
+          Identification et recherche de pannes, proposition de solutions pour optimiser la sécurité et les performances du matériel et logiciel.
+        </div>
+        <div class="timeline-tags">
+          <span class="tag">Diagnostics HW/SW</span>
+          <span class="tag">Sécurité système</span>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-period">Novembre 2014 - Juin 2017</div>
+        <div class="timeline-role">Commercial</div>
+        <div class="timeline-company">Apple Store, Nice</div>
+        <div class="timeline-desc">
+          Spécialiste référent B2B/B2C retail, commercialisation et conseil en solutions IT, assurances et recyclage produits.<br>
+          - Optimiser la conversion des leads ainsi que la CRM Data Quality.<br>
+          - Assurer la formation des spécialistes juniors.<br>
+          - Accompagnement clients et conseil en services et solutions IT.
+        </div>
+        <div class="timeline-tags">
+          <span class="tag">B2B/B2C</span>
+          <span class="tag">CRM</span>
+          <span class="tag">Formation</span>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-period">Janvier 2010 - Janvier 2020</div>
+        <div class="timeline-role">Designer en communication visuelle &amp; Photographe</div>
+        <div class="timeline-company">Freelance (en parallèle)</div>
+        <div class="timeline-desc">
+          Designer en communication visuelle, photographie professionnelle sportive et événementielle.
         </div>
         <div class="timeline-tags">
           <span class="tag">Photoshop</span>
@@ -505,27 +564,32 @@
       <div class="training-card featured">
         <div class="training-date">02/2026 – 08/2026</div>
         <div class="training-name">Formation Testeur Logiciel / QA</div>
-        <div class="training-detail">ENI École Informatique · Titre RNCP Niveau V</div>
+        <div class="training-detail">ENI École Informatique · Titre RNCP Niveau V — Bac+2</div>
       </div>
       <div class="training-card">
         <div class="training-date">07/2025 – 09/2025</div>
         <div class="training-name">Certification d'État T3P</div>
-        <div class="training-detail">Conducteur de Transport Public</div>
+        <div class="training-detail">Conducteur de Transport Public Particulier de Personnes</div>
       </div>
       <div class="training-card">
         <div class="training-date">2010 – 2011</div>
         <div class="training-name">Anglais — Niveau 3/5</div>
-        <div class="training-detail">Centre Américain de Langues</div>
+        <div class="training-detail">Centre Américain de Langues, Fès (Maroc)</div>
       </div>
       <div class="training-card">
         <div class="training-date">2008 – 2009</div>
         <div class="training-name">Web-master / Graphisme</div>
-        <div class="training-detail">Institut MULTIHEXA</div>
+        <div class="training-detail">Communication visuelle — Institut MULTIHEXA</div>
+      </div>
+      <div class="training-card">
+        <div class="training-date">2007 – 2008</div>
+        <div class="training-name">Informatique Tronc commun</div>
+        <div class="training-detail">Institut MULTIHEXA, Oujda (Maroc)</div>
       </div>
       <div class="training-card">
         <div class="training-date">2005 – 2006</div>
         <div class="training-name">Baccalauréat Technique</div>
-        <div class="training-detail">Gestion Comptabilité</div>
+        <div class="training-detail">Gestion Comptabilité — Lycée Technique, Oujda (Maroc)</div>
       </div>
     </div>
   </section>
@@ -538,24 +602,30 @@
     </div>
     <div class="skills-grid">
       <div>
-        <div class="skill-group-title">QA & Test</div>
-        <span class="skill-pill"><span class="dot"></span>Selenium / Jira</span>
-        <span class="skill-pill"><span class="dot"></span>Katalon / Cucumber</span>
-        <span class="skill-pill"><span class="dot"></span>Tests Exploratoires</span>
+        <div class="skill-group-title">QA & Test (en formation)</div>
+        <span class="skill-pill"><span class="dot"></span>Selenium</span>
+        <span class="skill-pill"><span class="dot"></span>Cucumber</span>
+        <span class="skill-pill"><span class="dot"></span>Katalon Studio</span>
+        <span class="skill-pill"><span class="dot"></span>Jira</span>
+        <span class="skill-pill"><span class="dot"></span>Tests fonctionnels</span>
+        <span class="skill-pill"><span class="dot"></span>Tests exploratoires</span>
       </div>
       <div>
-        <div class="skill-group-title">Développement</div>
-        <span class="skill-pill"><span class="dot"></span>Python / SQL</span>
-        <span class="skill-pill"><span class="dot"></span>HTML / CSS / JS</span>
+        <div class="skill-group-title">Développement (en formation)</div>
+        <span class="skill-pill"><span class="dot"></span>Python</span>
+        <span class="skill-pill"><span class="dot"></span>SQL</span>
+        <span class="skill-pill"><span class="dot"></span>HTML / CSS / JavaScript</span>
       </div>
       <div>
-        <div class="skill-group-title">Expertise Apple</div>
-        <span class="skill-pill"><span class="dot"></span>iOS / macOS / iPadOS</span>
-        <span class="skill-pill"><span class="dot"></span>Certificat HW+SW</span>
+        <div class="skill-group-title">Expertise Apple/Certificat</div>
+        <span class="skill-pill"><span class="dot"></span>Mac / iPhone / iPad</span>
+        <span class="skill-pill"><span class="dot"></span>Watch / AirPods / HomePod</span>
+        <span class="skill-pill"><span class="dot"></span>Hardware + Software</span>
       </div>
       <div>
-        <div class="skill-group-title">Logiciels</div>
-        <span class="skill-pill"><span class="dot"></span>Pack Adobe</span>
+        <div class="skill-group-title">Outils créatifs & divers</div>
+        <span class="skill-pill"><span class="dot"></span>Photoshop</span>
+        <span class="skill-pill"><span class="dot"></span>Lightroom</span>
         <span class="skill-pill"><span class="dot"></span>Windows 10/11</span>
       </div>
     </div>
